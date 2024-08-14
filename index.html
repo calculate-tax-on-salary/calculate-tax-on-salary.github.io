@@ -1161,11 +1161,22 @@
                 new TaxBracket(1000000, Infinity, 0.30)
             ];
 
+            //Obsolate New Tax Regime from FY 24-25
+            // const taxBracketsNew = [
+            //     new TaxBracket(0, 300000, 0.0),
+            //     new TaxBracket(300000, 600000, 0.05),
+            //     new TaxBracket(600000, 900000, 0.10),
+            //     new TaxBracket(900000, 1200000, 0.15),
+            //     new TaxBracket(1200000, 1500000, 0.20),
+            //     new TaxBracket(1500000, Infinity, 0.30)
+            // ];
+
+            //New Tax Regime from FY 24-25
             const taxBracketsNew = [
                 new TaxBracket(0, 300000, 0.0),
-                new TaxBracket(300000, 600000, 0.05),
-                new TaxBracket(600000, 900000, 0.10),
-                new TaxBracket(900000, 1200000, 0.15),
+                new TaxBracket(300000, 700000, 0.05),
+                new TaxBracket(700000, 1000000, 0.10),
+                new TaxBracket(1000000, 1200000, 0.15),
                 new TaxBracket(1200000, 1500000, 0.20),
                 new TaxBracket(1500000, Infinity, 0.30)
             ];
@@ -1180,6 +1191,7 @@
             var totalCtc = Number(document.querySelector('.total-sal-annual').value.replace(/,/g, ''));
             var professionalTax = Number(document.querySelector('.professional-tax').value.replace(/,/g, ''));
             const standardDeduction = 50000;
+            const standardDeductionNew = 75000; //As per New Tax Regime from FY 24-25
             const rebateOldRegime = 12500;
             const rebateNewRegime = 25000;
             const cess = 0.04;
@@ -1187,11 +1199,12 @@
             console.log('Total CTC: ' + totalCtc);
             console.log('Professional Tax: ' + professionalTax);
             console.log('Standard Deduction: ' + standardDeduction);
+            console.log('Standard Deduction New: ' + standardDeductionNew);
             console.log('Total Rebate on Old Regime: ' + rebateOldRegime);
             console.log('Total Rebate on New Regime: ' + rebateNewRegime);
             console.log('Health & Education Cess: ' + cess * 100 + "%");
 
-            var totalSalaryNew = totalCtc - standardDeduction;
+            var totalSalaryNew = totalCtc - standardDeductionNew;
             var totalSalary = totalCtc - standardDeduction;
 
             console.log('Total Taxable Salary as per Old Regime (Before Deductions): ' + totalSalary);
