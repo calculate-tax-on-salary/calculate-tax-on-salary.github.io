@@ -1,9 +1,9 @@
 ## Calculate TDS on Salary
 ### Compare Old & New Regime and choose the right regime for maximum tax benefits.
 
-* Calculate Tax deduction at source
+* Calculate Tax deduction at source including most common deductions like HRA, 80C, 80D, 80CCD, etc...
 * Calculate your take home salary
-* Old vs New Regime Comparison
+* Old vs New Tax Regime Comparison
 * A tentative snap of your payslip
 * Upto date tax slabs with the latest tax changes
 
